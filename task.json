@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++11",    // Use C++11 standard
+                "-pthread",      // Enable threading support
+                "-g",            // Include debugging information
+                "${file}",       // Compile the currently open file
+                "-o", "${fileDirname}/${fileBasenameNoExtension}" // Output the executable in the same directory
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by VS Code."
+        }
+    ]
+}
